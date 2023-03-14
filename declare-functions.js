@@ -6,9 +6,9 @@ const cal = (cost) => {
     let transaction = cost + (cost * interestFee) + fee;
     return transaction;
 };
+console.log(cal(100));
 
 // Exercise #2
-
 // Part 1
 friends('Jay','Jane','James');
 function friends(name1,name2,name3) {
@@ -28,25 +28,19 @@ function show(name1,age1,name2,age2,name3,age3) {
     console.log(`Welcome ${name1}, you are ${age1}. Welcome ${name2}, you are ${age2}. Welcome ${name3}, you are ${age3}.`);
 }
 
-
 // ================= Challenge Yourself =================
-const stdResult = (score) => {
+const stdResult = () => {
+    let score = Math.floor(Math.random() * 12);
+    console.log(score);
+
     if (score === 11) {
         console.log('Perfect');
-    } else if (score > 8 && score < 11) {
+    } else if (score > 8 ) {
         console.log('Excellent');
-    } else if (score >= 5 && score < 8) {
-        return true;
+    } else if (score >= 5) {
+        console.log('Pass');
     } else {
-        return false;
+        console.log('Fail');
     }
-}        
-
-// Part 1
-console.log(stdResult(5));
-
-// Part 2
-console.log(stdResult(9));
-
-// Part 3
-console.log(stdResult(11));
+}
+stdResult();
